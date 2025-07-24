@@ -7,10 +7,7 @@ import lombok.*;
 @AllArgsConstructor
 
 
-public class Funcionario {
+public class Funcionario extends Usuario {
     private Long idFuncionario;
-    private String nome;
-    private String email;
-    private String senha;
     private Long idSetor;
 }
