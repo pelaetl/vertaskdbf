@@ -9,9 +9,26 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:8100") //Permite que seu frontend (por exemplo, Angular ou Ionic rodando em localhost:8100) consiga acessar a API do backend sem bloqueio do navegador.
+
+
+// A anotação @CrossOrigin(origins = "http://localhost:8100") permite que o seu backend (Spring Boot) aceite requisições
+//vindas do endereço http://localhost:8100.
+
+// Para que serve?
+// CORS (Cross-Origin Resource Sharing): Por padrão, navegadores bloqueiam requisições AJAX feitas de um domínio
+// diferente do backend (por exemplo, seu frontend Angular rodando em localhost:8100 tentando acessar o backend em localhost:8080).
+// Com essa anotação, você libera o backend para aceitar requisições do frontend, evitando erros de CORS.
 @RestController
 @RequestMapping("/api/v1/setor") //http://localhost:8080/api/v1/setor
 public class SetorController {
+
+    @GetMapping("/existe")
+    public ResponseEntity<Boolean> existeSetorComNome(@RequestParam String nome) {
+        List<Setor> setores = setorRepository.findAll();
+        boolean existe = setores.stream().anyMatch(setor -> setor.getNome().equalsIgnoreCase(nome));
+        return ResponseEntity.ok(existe);
+    }
 
     // private List<Setor> setores;
     // private long nextId = 1L;
