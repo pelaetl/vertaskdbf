@@ -1,5 +1,5 @@
-package br.cefetmg.vertask.controller;
+// package br.cefetmg.vertask.controller;
 
-public class AdministradorController {
+// public class AdministradorController {
     
-}
+// }

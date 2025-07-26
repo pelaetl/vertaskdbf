@@ -1,20 +1,20 @@
-package br.cefetmg.vertask.repository;
+// package br.cefetmg.vertask.repository;
 
-import br.cefetmg.vertask.model.Administrador;
+// import br.cefetmg.vertask.model.Administrador;
 
-import org.jdbi.v3.core.Jdbi;
-import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;
-import org.jdbi.v3.sqlobject.customizer.Bind;
-import org.jdbi.v3.sqlobject.customizer.BindBean;
-import org.jdbi.v3.sqlobject.statement.GetGeneratedKeys;
-import org.jdbi.v3.sqlobject.statement.SqlQuery;
-import org.jdbi.v3.sqlobject.statement.SqlUpdate;
-import org.springframework.context.annotation.Bean;
-import org.springframework.stereotype.Repository;
+// import org.jdbi.v3.core.Jdbi;
+// import org.jdbi.v3.sqlobject.config.RegisterBeanMapper;
+// import org.jdbi.v3.sqlobject.customizer.Bind;
+// import org.jdbi.v3.sqlobject.customizer.BindBean;
+// import org.jdbi.v3.sqlobject.statement.GetGeneratedKeys;
+// import org.jdbi.v3.sqlobject.statement.SqlQuery;
+// import org.jdbi.v3.sqlobject.statement.SqlUpdate;
+// import org.springframework.context.annotation.Bean;
+// import org.springframework.stereotype.Repository;
 
-@Repository
-@RegisterBeanMapper(Administrador.class)
-public interface AdministradorRepository {
+// @Repository
+// @RegisterBeanMapper(Administrador.class)
+// public interface AdministradorRepository {
 
 
-}
+// }
